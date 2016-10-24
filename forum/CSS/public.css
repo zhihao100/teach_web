@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化样式*/
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style: none;
+}
+li{
+    float:left;
+    margin-left:20px;
+}
+/*top begin*/
+.header{
+    width:100%;
+    height:50px;
+    background-color:#000;
+    position: fixed;
+    z-index: 5;
+    font-size: 18px;
+}
+.logo{
+    float:left;
+    height:40px;
+    line-height:40px;
+    margin-left: 50px;
+}
+.logo h2{
+    color:#999;
+    text-decoration: none;
+}
+.bar{
+    float:left;
+    height:40px;
+    line-height:50px;
+    margin:0 0 0 40px;
+}
+.bar li{
+    margin: 0 2px;
+    padding:0 13px;
+}
+.home{
+    width: 40px;
+    background-color:#e7e7e7;
+    font-weight: bold;
+    color: #4399ca;
+}
+
+.user{
+    float:right;
+    height:40px;
+    line-height:50px;
+    margin:0 40px 0 0;
+}
+.header a:link,a:visited{
+    color: white;
+    text-decoration: none;
+}
+.header a:hover,a:focus{
+    color:#4399ca;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.active{
+    width: 78px;
+    background-color:#e7e7e7;
+}
+.active a{
+    font-weight: bold;
+    color: #4399ca;
+}
+
+/*top end*/
+body{
+   position: absolute;
+	background:#f4f4f4;
+    font-size:14px;
+	}
+.footer{
+    clear:left;
+    width:100%;
+    height:100px;
+    background-color:#666;
+}
+

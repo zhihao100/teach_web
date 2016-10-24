@@ -1,0 +1,324 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化*/
+.homework_done_list{
+    width:80%;
+    margin-left: 200px;
+}
+.header_title{
+    width:300px;
+    height:50px;
+    position:relative;
+    left:40px;
+}
+.header_title p{
+    margin: 0;
+    font-size:25px;
+    font-weight:bold;
+}
+.header_title img{
+    float: left;
+}
+.homework_list{
+    width:90%;
+    border:1px solid #A1A1A1;
+    margin-top:10px;
+    margin-left:30px;
+}
+.homework_list table{
+    table-layout:fixed;
+}
+.homework_list table th{
+    height:30px;
+    padding:10px 0;
+    font-size:20px;
+    font-weight:bold;
+    border-right:1px solid #FFF;
+    background-color:#e2e2e2;
+    color:#969696;
+}
+.homework_list table tr{
+    height:50px;
+    padding:10px 0;
+    font-size:16px;
+    text-align:center;
+    background-color:#EEE;
+}
+
+.homework_list table td{
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/
+    border-right:1px solid #fff;
+    border-bottom:1px solid #fff;
+}
+.homework_list table td a:link,a:visited{
+    color: #1d1d1d;
+    cursor: pointer;
+    text-decoration: none;
+}
+.homework_list table td a:hover{
+    color: #4399ca;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*分页*/
+.page{
+    margin:20px 0;
+}
+.page ul{
+
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.page ul li{
+    height:25px;
+    width:30px;
+    padding:10px 15px;
+    display:inline;
+    color:#000;
+    margin-right:20px;
+}
+.page ul .selected{
+    background-color:#3E3EFF;
+}
+.page ul li a{
+    text-decoration: none;
+    color:#000;
+}
+.page ul li:hover{
+    border:1px solid #00F;
+}
+/*作业具体界面*/
+#main-wrap{
+    width:90%;
+    margin:20px auto;
+    border:1px solid #B9B9B9;
+    padding:20px 10px 0;
+}
+.info-person{
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    color:#000;
+}
+.info-person span{
+    font-size:16px;
+    font-weight:500;
+    margin-left:20px;
+}
+.choose-wrap{
+    width:93%;
+    margin:10px auto 90px;
+}
+.choose-wrap .left-wrap, .right-wrap{
+    display: inline-table;
+    width:46%;
+    overflow:hidden;
+    margin:0 16px 30px;
+    padding-top:5px;
+    border:1px solid #B9B9B9;
+}
+.choose-wrap .left-wrap .left_title, .right-wrap .right_title{
+    float:left;
+    margin-right: 10px;
+    position: relative;
+    bottom:6px;
+}
+.choose-wrap .left-wrap .l-title, .choose-wrap .right-wrap .r-title{
+    font-weight:bold;
+    letter-spacing:1px;
+    font-size: 20px;
+
+}
+.choose-wrap .left-wrap .left1, .choose-wrap .right-wrap .right1 {
+    display: inline-block;
+    width: 34%;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.choose-wrap .left-wrap .left1 .num, .choose-wrap .right-wrap .right1 .num{
+    font-weight:bold;
+    color:#000;
+}
+.choose-wrap .left-wrap .left1 .answer-correct, .answer-correct, .choose-wrap .right-wrap .right1 .answer, .choose-wrap .right-wrap .right .answer{
+    color:#000;
+}
+.choose-wrap .left-wrap .left1 .answer-wrong{
+    color:#F00;
+}
+.choice-wrap ol .choice_list{
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+.choice_list .choices_text{
+    width: 80%;
+    list-style-type: upper-latin;
+}
+.choice_list .choices_text li{
+    margin:10px 0;
+    width:100%;
+    min-height:20px;
+    border-radius: 20px;
+    padding-left:10px;
+}
+
+.choice_list .choices_picture{
+    width: 90%;
+    list-style-type: upper-latin;
+}
+.choice_list .choices_picture li{
+    display: inline-block;
+    margin:10px 0 10px 15px;
+    width:17%;
+    text-align: center;
+}
+.choice_list .choices_picture li img{
+    width:100%;
+    height:60px;
+}
+.choice_list .choices_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.choice_list .choices_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.choice_list .choices_picture li:hover{
+    cursor: pointer;
+}
+/*tk-wrap*/
+.fill{
+    width:93%;
+    margin-left: 45px;
+}
+.fill .tk-wrap{
+    display: inline-table;
+    width:42%;
+    margin:0 15px 30px;
+    padding:10px 20px;
+    border:1px solid #B9B9B9;
+}
+
+.tk-wrap span{
+    font-size: 20px;
+    font-weight: bold;
+    margin:30px 0;
+}
+.tk-wrap .filling_list{
+    margin-bottom:10px;
+    min-height:20px;
+    width:100%;
+    margin-top: 10px;
+    list-style-type: decimal;
+}
+.tk-wrap .filling_list .fill_answer{
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    padding-top:5px;
+    padding-left:5px;
+    word-break:break-all;
+}
+.tk-wrap .filling_list .filling_blank{
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+}
+.tk-wrap .filling_list .filling_blank li{
+    max-width:100%;
+    margin:10px 0 0 0;
+    min-height:20px;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    padding-top:5px;
+    padding-left:5px;
+    word-break:break-all;
+}
+.filling_list .filling_picture{
+    display: inline-block;
+    margin:10px 15px;
+    width:26%;
+    text-align: center;
+}
+.filling_list .filling_picture  img{
+    width:100%;
+    height:80px;
+}
+.filling_list .filling_picture  img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.filling_list .filling_picture span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.filling_list .filling_picture:hover{
+    cursor: pointer;
+}
+
+/*subject-wrap*/
+.subject{
+    width:93%;
+    margin-left: 45px;
+}
+.subject .subject-wrap{
+    display: inline-table;
+    width:42%;
+    margin:0 15px 30px;
+    padding:10px 20px;
+    border:1px solid #B9B9B9;
+
+}
+.subject-wrap span{
+    font-size: 20px;
+    font-weight: bold;
+    margin:30px 0;
+}
+.subject-wrap .subjective_list{
+    margin-bottom:10px;
+    min-height:20px;
+    width:100%;
+    margin-top: 10px;
+    list-style-type: decimal;
+}
+.subjective_list .subjective_answer{
+    min-height:20px;
+    width:100%;
+    padding-top:5px;
+    padding-left:5px;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+.subjective_list .subjective_picture{
+    width: 100%;
+}
+.subjective_list .subjective_picture li{
+    display: inline-block;
+    margin:10px 15px;
+    width:26%;
+    text-align: center;
+}
+.subjective_list .subjective_picture li img{
+    width:100%;
+    height:80px;
+}
+.subjective_list .subjective_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.subjective_list .subjective_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.subjective_list .subjective_picture li:hover{
+    cursor: pointer;
+}

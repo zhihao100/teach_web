@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化样式*/
+*{
+	margin:0;
+	padding:0;
+	font-size:14px;
+	font-family:微软雅黑;
+}
+a{
+	text-decoration:none;
+	color:#999;
+}
+li{
+	list-style-type:none;
+}
+
+/*bar样式*/
+.bar{
+	height:50px;
+	line-height:50px;
+	border-bottom:1px solid #e2e2e2;
+	background-color:#e2e2e2;
+	color:#969696;
+}
+.bar h3{
+	padding-left:20px;
+}
+.bar h3 a{
+	color:#969696; 
+}
+.bar h3 a:hover{
+	color:#4B4B4B;
+}
+/*main-wrap样式*/
+.main-wrap{
+	width:95%;
+	margin:30px auto;
+}
+/*select样式*/
+.main-wrap .select{
+	margin:10px 0;
+}
+.select select{
+	height:40px;
+	width:250px;
+	padding:10px;
+	margin-right:105px;
+	text-align:center;
+	border:1px solid #000;;
+	background-color:#E4E4E4;
+}
+.info{
+	width:95%;
+	border:1px solid #A1A1A1;
+	margin-top:30px;
+	margin-right:150px;
+}
+.info table th{
+	width:24%;
+	height:30px;
+	padding:10px 0;
+	font-size:20px;
+	font-weight:bold;
+	border:1px solid #FFF;
+	background-color:#e2e2e2;
+	color:#969696;
+}
+.info table td{
+	width:24%;
+	height:30px;
+	padding:10px 0;
+	font-size:14px;
+	font-weight:bold;
+	border:1px solid #FFF;
+	background-color:#e2e2e2;
+	color:#1d1d1d;
+}
+.info table tr{
+	width:24%;
+	height:50px;
+	border:1px solid #FFF;
+	padding:10px 0;
+	text-align:center;
+	background-color:#EEE;
+}
+
+
+
+.info .edit button{
+	height:30px;
+	width:60px;
+	border:none;
+	background-color:#4C4C4C;
+	margin-right:10px;
+	border-radius:2px;
+	color:#E3E3E3;
+	cursor:pointer;
+}
+.info .edit button:hover{
+	background-color:#00F;
+}
+.info .delete button{
+	height:30px;
+	width:60px;
+	border:none;
+	background-color:#4C4C4C;
+	margin-left:10px;
+	border-radius:2px;
+	color:#E3E3E3;
+	cursor:pointer;
+}
+.info .delete button:hover{
+	background-color:#00F;
+}
+.page{
+	margin:20px 0;
+}
+.page ul{
+	
+	height:50px;
+	line-height:50px;
+	text-align:center;
+}
+.page ul li{
+	height:25px;
+	width:30px;
+	padding:10px 15px;
+	display:inline;
+	color:#000;
+	margin-right:20px;
+}
+.page ul .selected{
+	background-color:#3E3EFF;
+}
+.page ul li a{
+	color:#000;
+}
+.page ul li:hover{
+	border:1px solid #00F;
+	}

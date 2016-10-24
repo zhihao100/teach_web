@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+	font-size:14px;
+	font-family:"Microsoft YaHei UI";
+	}
+a{
+	text-decoration:none;
+	color:#999;
+}
+li{
+	list-style-type:none;
+}
+	
+/*bar样式*/
+.bar{
+	height:50px;
+	line-height:50px;
+	border-bottom:1px solid #e2e2e2;
+	background-color:#e2e2e2;
+	color:#969696;
+}
+.bar h3{
+	padding-left:20px;
+}
+.bar h3 a{
+	color:#969696; 
+}
+.bar h3 a:hover{
+	color:#4B4B4B;
+}
+.wrap{
+	width:95%;
+	margin:10px auto;
+	}
+
+.tr1{
+	background-color:#e4e4e4;
+	}
+.tr2{
+	background-color:#f9f9f9;
+}
+.tr1 th{
+	border-left:1px solid #F3F3F3;
+	padding:10px 0;
+	font-size:16px;
+	}
+.tr1 td,.tr2 td{
+	border-left:1px solid #f3f3f3;
+	padding:10px 0;
+	text-align:center;
+	}
+.tr2 button,.tr1 button{
+	padding:5px 10px;
+    margin:auto 5px;
+	border:none;
+	color:#fff;
+	background-color:#4C4C4C;
+	}
+	button:hover{
+		background-color:#3E3EFF;
+		cursor: pointer;
+	}
+/*分页样式*/
+.page{
+	margin:20px 0;
+}
+.page ul{
+	
+	height:50px;
+	line-height:50px;
+	text-align:center;
+}
+.page ul li{
+	height:25px;
+	width:30px;
+	padding:10px 15px;
+	display:inline;
+	color:#000;
+	margin-right:20px;
+}
+.page ul .active{
+	background-color:#3E3EFF;
+}
+.page ul li a{
+	color:#000;
+}
+.page ul li:hover{
+	border:1px solid #00F;
+}

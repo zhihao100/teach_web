@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化*/
+/*作业具体界面*/
+.homework_content{
+    float: left;
+    width:90%;
+    min-height: 500px;
+    margin:30px 0 50px 70px;
+    border:1px solid #999;
+}
+/*choice begin*/
+.homework_content .choice_content{
+    width:90%;
+    margin:50px 50px 20px;
+}
+ .choice_content span{
+    font-size: 20px;
+    font-weight: bold;
+}
+ .choice_content ol div{
+    width:100%;
+    min-height:20px;
+    border-radius: 5px;
+}
+ .choice_content ol .choice_list{
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+ .choice_list .choices_text{
+    width: 80%;
+    list-style-type: upper-latin;
+}
+ .choice_list .choices_text li{
+    margin:10px 0;
+    width:100%;
+    min-height:20px;
+    border-radius: 20px;
+    padding-left:10px;
+}
+
+.choice_list .choices_picture{
+    width: 100%;
+    list-style-type: upper-latin;
+}
+.choice_list .choices_picture li{
+    display: inline-block;
+    margin:10px 15px;
+    width:13%;
+    text-align: center;
+}
+.choice_list .choices_picture li img{
+    width:100%;
+    height:80px;
+}
+.choice_list .choices_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.choice_list .choices_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.choice_list .choices_picture li:hover{
+    cursor: pointer;
+}
+/*choice end*/
+
+/*filling begin*/
+.homework_content .filling_content{
+    width: 90%;
+    margin:50px 50px 20px;
+
+}
+ .filling_content span{
+    font-size: 20px;
+    font-weight: bold;
+    margin:30px 0;
+}
+ .filling_content .filling_list{
+    margin-bottom:20px;
+    min-height:20px;
+    width:100%;
+}
+
+.filling_list .filling_picture{
+    width: 100%;
+}
+.filling_list .filling_picture li{
+    display: inline-block;
+    margin:10px 15px;
+    width:13%;
+    text-align: center;
+}
+.filling_list .filling_picture li img{
+    width:100%;
+    height:80px;
+}
+.filling_list .filling_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.filling_list .filling_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.filling_list .filling_picture li:hover{
+    cursor: pointer;
+}
+/*filling end*/
+
+
+
+/*subjective begin*/
+.homework_content .subjective_content{
+    width:90%;
+    margin:50px 50px 20px;
+}
+.homework_content .subjective_content span{
+    font-size: 20px;
+    font-weight: bold;
+    margin:30px 0;
+}
+.homework_content .subjective_content  .subjective_list{
+    margin-bottom:20px;
+    margin-top: 20px;
+    min-height:20px;
+    width:100%;
+}
+.subjective_list .subjective_picture{
+    width: 100%;
+}
+.subjective_list .subjective_picture li{
+    display: inline-block;
+    margin:10px 15px;
+    width:13%;
+    text-align: center;
+}
+.subjective_list .subjective_picture li img{
+    width:100%;
+    height:80px;
+}
+.subjective_list .subjective_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.subjective_list .subjective_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.subjective_list .subjective_picture li:hover{
+    cursor: pointer;
+}
+
+/*subjective end*/
+
+

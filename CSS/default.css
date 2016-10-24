@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化样式*/
+*{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style: none;
+}
+li{
+	float:left;
+	margin-left:20px;
+}
+/*top begin*/
+.header{
+	width:100%;
+	height:50px;
+	background-color:#000;
+	position: fixed;
+	z-index: 5;
+	font-size: 18px;
+}
+.logo{
+	float:left;
+	height:40px;
+	line-height:40px;
+	margin-left: 50px;
+}
+.logo h2{
+	color:#999;
+	text-decoration: none;
+}
+.bar{
+	float:left;
+	height:40px;
+	line-height:50px;
+	margin:0 0 0 40px;
+}
+.bar li{
+	margin: 0 2px;
+	padding:0 13px;
+}
+.home{
+	width: 40px;
+	background-color:#e7e7e7;
+
+}
+.home a{
+    font-weight: bold;
+    color: #4399ca;
+}
+.user{
+	float:right;
+	height:40px;
+	line-height:50px;
+	margin:0 40px 0 0;
+}
+.header a:link,a:visited{
+	color: white;
+	text-decoration: none;
+}
+.header a:hover,a:focus{
+	color:#4399ca;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.active{
+	width: 78px;
+	background-color:#e7e7e7;
+}
+.active a{
+	font-weight: bold;
+	color: #4399ca;
+}
+
+/*top end*/
+.default{
+	background-color:#666;
+	}	
+		
+.mainbody{
+	width:80%;
+	margin:0 auto;
+    padding-top: 45px;
+	background-color:#FFF;
+	}
+
+
+.focus{
+	width:100%;
+	height:300px;
+	margin:10px 0;
+	overflow:hidden;
+	}
+	
+.study{
+	width:100%;
+	margin:10px 0;
+	float:left;
+	
+	}
+
+.labor, .dohomework, .forum{
+	width:100%;
+	margin:20px 0;
+	float:left;
+	}
+	
+.study_title, .labor_title, .dohomework_title, .forum_title{
+	width:100%;
+	height:40px;
+	margin:5px 0;
+	background-color:#666;
+	border-radius:5px;
+	}	
+
+.study_title h3, .labor_title h3, .dohomework_title h3, .forum_title h3{
+	margin-top:5px;
+	margin-bottom:5px;
+	padding-left:20px;
+	line-height:40px;
+	color:#FFF;
+	}
+.study_content, .dohomework_content{
+	width:40%;
+	float:left;
+	margin-top:30px;
+	padding-bottom:30px;
+	}
+	
+.labor_content, .forum_content{
+	width:40%;
+	float:right;
+	margin-top:30px;
+	padding-bottom:30px;
+	}
+
+.study_image, .dohomework_image{
+	width:50%;
+	padding-top:30px;
+	padding-bottom:30px;
+	float:right;
+	}
+	
+.labor_image, .forum_image{
+	width:50%;
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-left:100px;
+	float:left;
+	}
+		
+.study_content p, .labor_content p, .dohomework_content p, .forum_content p{
+	padding-top:30px;
+	padding-left:20px;
+	font-weight:bold;
+	font-size:20px;
+	text-indent:2em;
+	letter-spacing:5px;
+	inline-box-align:initial;
+	color:#000;
+	}
+	
+.study_image img:hover, .labor_image img:hover, .dohomework_image img:hover, .forum_image img:hover, .study_image img:active, .labor_image img:active, .dohomework_image img:active, .forum_image img:active{
+	height:260px;
+	box-shadow:1px 1px 10px 5px #666666;
+	border-radius:5px;
+	}
+		
+.study_content:hover, .labor_content:hover, .dohomework_content:hover, .forum_content:hover, .study_content:active, .labor_content:active, .dohomework_content:active, .forum_content:active{
+	box-shadow:1px 1px 10px 5px #666666;
+	border-radius:5px; 
+		}
+
+.study_title:hover, .labor_title:hover, .dohomework_title:hover, .forum_title:hover{
+	box-shadow:1px 1px 10px 5px #000; 
+	border-radius:5px;
+	}
+	
+.footer{
+	clear:left;
+	width:100%;
+	height:100px;
+	margin-top:10px;
+	border:1px solid #0F0;
+	background-color:#666;
+	}
+	

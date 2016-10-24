@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登陆页面</title>
+    <link type="text/css" rel="stylesheet" href="CSS/login.css" />
+</head>
+<body>
+<!--login start-->
+<div class="login">
+    <!--l_title start-->
+    <div class="l_title">
+        <span>欢迎登录</span>
+        <div class="clear"></div>
+    </div>
+    <!--end l_title-->
+
+    <!--l_user start-->
+    <div class="l_user">
+        <form action="loginUser.php" method="post">
+            <label><input type="radio" class="student" name="id" value="1" /><span>学生</span>
+                <input type="radio" class="teacher" name="id" value="2" checked="checked"/><span>教师</span>
+                <input type="radio" class="admin" name="id" value="3" /><span>管理员</span></label>
+            <p id="tip_username" style="color:#F00"></p>
+            <input type="text" class="name" name="username" id="username" placeholder="请输入用户名" />
+            <p id="tip_password" style="color:#F00"></p>
+            <input type="password" class="pass" name="password" id="password" placeholder="请输入密码" />
+            <p id="tip_code" style="color:#F00"></p>
+            <input type="text" class="code" name="code" id="code" placeholder="请输入验证码" maxlength="4" /><span class="codeimage"><img id="captcha_img" style="width: 100px;" alt="验证码" src="getCaptcha.php?r =0"><a onclick="document.getElementById('captcha_img').src='getCaptcha.php?r ='+Math.random()" href="javascript:void(0)">看不清？</a></span>
+            <input type="submit" value="登录" class="sub" onclick="return checklogin()"/>
+        </form>
+        <!--<p1 class="miss"><a href="#">创建账号?</a></p1>-->
+        <!--<p1 class="miss"><a href="seekpwd.html">忘记密码?</a>&nbsp;&nbsp;&nbsp;<span style="color:#000;">|</span>&nbsp;&nbsp;&nbsp;</p1>-->
+    </div>
+    <!--end l_user-->
+</div>
+<!--end login-->
+<script type="text/javascript" src="JS/login.js"></script>
+</body>
+</html>
+

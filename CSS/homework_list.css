@@ -1,0 +1,330 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化*/
+.homework_undo_list{
+    width:80%;
+    margin-left: 200px;
+}
+.header_title{
+    width:300px;
+    height:50px;
+    position:relative;
+    left:40px;
+}
+.header_title p{
+    margin: 0;
+    font-size:25px;
+    font-weight:bold;
+}
+.header_title img{
+float: left;
+}
+.homework_list{
+    width:90%;
+    border:1px solid #A1A1A1;
+    margin-top:10px;
+    margin-left:30px;
+}
+.homework_list table{
+    table-layout:fixed;
+}
+.homework_list table th{
+    height:30px;
+    padding:10px 0;
+    font-size:20px;
+    font-weight:bold;
+    border-right:1px solid #FFF;
+    background-color:#e2e2e2;
+    color:#969696;
+}
+.homework_list table tr{
+    height:50px;
+    padding:10px 0;
+    font-size:16px;
+    text-align:center;
+    background-color:#EEE;
+}
+
+.homework_list table td{
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/
+    border-right:1px solid #fff;
+    border-bottom:1px solid #fff;
+}
+.homework_list table td a:link,a:visited{
+    color: #1d1d1d;
+    cursor: pointer;
+    text-decoration: none;
+}
+.homework_list table td a:hover{
+    color: #4399ca;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*分页*/
+.page{
+    margin:20px 0;
+}
+.page ul{
+
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.page ul li{
+    height:25px;
+    width:30px;
+    padding:10px 15px;
+    display:inline;
+    color:#000;
+    margin-right:20px;
+}
+.page ul .selected{
+    background-color:#3E3EFF;
+}
+.page ul li a{
+    text-decoration: none;
+    color:#000;
+}
+.page ul li:hover{
+    border:1px solid #00F;
+}
+
+
+/*作业具体界面*/
+.header{
+    text-align: center;
+}
+.header span{
+    margin:0 15px;
+}
+.homework_content{
+    float: left;
+    width:80%;
+    min-height: 500px;
+    margin:30px 0 50px 150px;
+    border:1px solid #999;
+    background-color: #eee;
+}
+/*choice begin*/
+.homework_content .choice_content{
+    width:90%;
+    margin:50px 50px 20px;
+}
+ .choice_content span{
+    font-size: 20px;
+    font-weight: bold;
+}
+ .choice_content ol div{
+    width:100%;
+    min-height:20px;
+    border-radius: 5px;
+}
+ .choice_content ol .choice_list{
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+ .choice_list .choices_text{
+    width: 80%;
+    list-style-type: upper-latin;
+}
+ .choice_list .choices_text li{
+    margin:10px 0;
+    width:100%;
+    min-height:20px;
+    border-radius: 20px;
+    padding-left:10px;
+}
+.choice_list .choices_text li:hover{
+    background-color: #4399ca;
+    cursor: pointer;
+}
+.choice_list .choices_picture{
+    width: 100%;
+    list-style-type: upper-latin;
+}
+.choice_list .choices_picture li{
+    display: inline-block;
+    margin:10px 15px;
+    width:13%;
+    text-align: center;
+}
+.choice_list .choices_picture li img{
+    width:100%;
+    height:80px;
+}
+.choice_list .choices_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.choice_list .choices_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.choice_list .choices_picture li:hover{
+    cursor: pointer;
+}
+.selected{
+    background-color: #4399ca;
+}
+.display_none{
+    display: none;
+}
+/*choice end*/
+
+
+/*filling begin*/
+.homework_content .filling_content{
+    width: 90%;
+    margin:50px 50px 20px;
+
+}
+ .filling_content span{
+    font-size: 20px;
+    font-weight: bold;
+    margin:30px 0;
+}
+ .filling_content .filling_list{
+    margin-bottom:20px;
+    min-height:20px;
+    width:100%;
+}
+.filling_content .filling_list .filling_blank{
+  width: 100%;
+}
+.filling_content .filling_list .filling_blank li{
+    display: inline-block;
+    width: 20%;
+    margin:10px 35px 0 0;
+    height:20px;
+    border-bottom: 1px solid black;
+}
+.filling_content .filling_list .filling_blank li input{
+    position:relative;
+     left:2px;
+    width: 100%;
+    height:20px;
+    background-color:transparent;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    color: #0E0E0E;
+}
+.filling_list .filling_picture{
+    width: 100%;
+}
+.filling_list .filling_picture li{
+    display: inline-block;
+    margin:10px 15px;
+    width:13%;
+    text-align: center;
+}
+.filling_list .filling_picture li img{
+    width:100%;
+    height:80px;
+}
+.filling_list .filling_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.filling_list .filling_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.filling_list .filling_picture li:hover{
+    cursor: pointer;
+}
+/*filling end*/
+
+
+
+/*subjective begin*/
+.homework_content .subjective_content{
+    width:90%;
+    margin:50px 50px 20px;
+}
+.homework_content .subjective_content span{
+    font-size: 20px;
+    font-weight: bold;
+    margin:30px 0;
+}
+.homework_content .subjective_content  .subjective_list{
+    margin-bottom:20px;
+    margin-top: 20px;
+    min-height:20px;
+    width:100%;
+}
+
+.subjective_list .subjective_picture{
+    width: 100%;
+}
+.subjective_list .subjective_picture li{
+    display: inline-block;
+    margin:10px 15px;
+    width:13%;
+    text-align: center;
+}
+.subjective_list .subjective_picture li img{
+    width:100%;
+    height:80px;
+}
+.subjective_list .subjective_picture li img:hover{
+    transform: scale(3,3);
+    transition:0.5s transform;
+}
+.subjective_list .subjective_picture li span{
+    width:100%;
+    font-size: medium;
+    font-weight: normal;
+}
+.subjective_list .subjective_picture li:hover{
+    cursor: pointer;
+}
+.subjective_list .subjective_answer{
+width:100%;
+}
+.subjective_list .ques_btn{
+    float: right;
+    position: relative;
+    right:0;
+    width:18%;
+    height:35px;
+}
+.subjective_list  .ques_btn .uppic1{
+    position: inherit;
+    border:1px solid #e2e2e2;
+    background:#e2e2e2;
+    width:70px;
+    height:30px;
+}
+.subjective_list .ques_btn .uppic2{
+    position: inherit;
+    border:1px solid #e2e2e2;
+    background:#e2e2e2;
+    color: #0E0E0E;
+    width:80px;
+    height:32px;
+    cursor: pointer;
+}
+
+/*subjective end*/
+
+.homework_content .sub_submit{
+    font-size: 18px;
+    color: white;
+    background-color:#000;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    position: relative;
+    left:400px;
+}
+.homework_content .sub_submit:hover{
+    background-color:#4399ca;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}

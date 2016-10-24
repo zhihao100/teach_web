@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*内容部分*/
+.main-wrap{
+	width:80%;
+	margin:50px auto;
+	}
+.hot{
+	width:100%;
+	}
+.hot .content-list{
+	width:100%;
+	background-color:#fff;
+	display: inline-block;
+}
+.title{
+	background-color:#CCC;
+	line-height:20px;
+	padding:5px 10px;
+	}
+.hot .title span{
+	color:#F00;
+	font-weight:bold;
+	}
+.hot .content-list li{
+	width:30%;
+	display:inline-block;
+	padding:10px 5px;
+	margin-bottom: 20px;
+	border-bottom:1px dashed #999999;
+	}
+.hot .content-list li .title-name, .hot .content-list li .content-name{
+	color:#000;
+	font-weight:bold;
+	}
+.hot .content-list li .title-name:hover, .hot .content-list li .content-name:hover{
+	color:#F00;
+	text-decoration:underline;
+	}
+.class-list .title span a:link, .class-list .title span a:visited{
+	color:#00F;
+	font-weight:bold;
+	}
+.class-list .title span a:hover, .class-list .title span a:active{
+	color:#00F;
+	font-weight:bold;
+	text-decoration:underline;
+	}
+.content-box{
+	float:left;
+	width:100%;
+	}
+.content-box .tip-image{
+	background:url(../images/no.png) 10px center no-repeat;
+	padding:50px 150px;
+	background-color:#fff;
+	}
+.hot .content-list a{
+	color:#000;
+	}
+.children-content-box{
+	width:100%;
+	background-color:#fff;
+	display: inline-block;
+	}
+.children-content-box .childBox{
+	width:30%;
+	margin:10px;
+	float:left;
+	border-bottom:1px dotted #666666;
+	}
+
+.children-content-box .childBox .child-content-list{
+	width:80%;
+	float:right;
+	padding:20px 10px;
+	color:#999;
+	}
+.child-content-list h4{
+	padding-bottom:5px;
+	}
+.child-content-list h4 a:link, .child-content-list h4 a:visited{
+	color:#000;
+	}
+.child-content-list h4 a:hover, .child-content-list h4 a:active{
+	color:#F00;
+	text-decoration:underline;
+	}
+.child-content-list h4 span{
+	color:#FF8000;
+	font-weight:normal;
+	}
+.children-content-box .new{
+	background:url(../images/new.gif) 10px  center no-repeat;
+	}

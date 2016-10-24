@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>作业批改-作业具体页面</title>
+<link rel="stylesheet" type="text/css" href="CSS/homework.css" />
+</head>
+<body>
+<div class="bar"><h3><a href="index.php">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;作业批改-作业具体页面</h3></div>
+<!-- main-wrap start -->
+<div id="main-wrap">
+	<div class="info-person"><span id="homeWorkName"></span><span id="classname"></span><span id="username"></span></div>
+    <!-- choose-wrap start-->
+    <div class="choose-wrap">
+    	<div class="left-wrap">
+    		<div class="left_title"><span class="l-title">一:选择题:</span>
+			<span class="num"></span>
+            </div>
+    		<div class="left1">
+
+       	 	</div>
+         </div>
+         <div class="right-wrap">
+             <div class="right_title"><span class="r-title">一：选择题参考答案:</span>
+                 <span class="num"></span>
+             </div>
+        	<div class="right1">
+            	<span class="answer"></span>
+           </div>
+        </div>
+    </div>
+    <!-- choose-wrap end-->
+    <!-- tk-wrap start -->
+	<div class="fill">
+    <div class="tk-wrap">
+		<span>二:填空题</span>
+		<ol id="Sum">
+
+
+		</ol>
+    </div>
+        <div class="tk-wrap">
+            <span>二:填空题参考答案</span>
+            <ol id="Sum_answer">
+
+            </ol>
+        </div>
+</div>
+     <!-- tk-wrap end -->
+     <!-- subject-wrap start -->
+    <div class="subject">
+     <div class="subject-wrap">
+         <span>三:简答题</span>
+         <ol id="short_student">
+         </ol>
+      </div>
+    <div class="subject-wrap">
+        <span>三:简答题参考答案</span>
+        <ol id="short_answer">
+
+        </ol>
+    </div>
+</div>
+<!-- main-wrap end -->
+<div id="grade-wrap">
+    <div class="sub"><button id="s">提交</button></div>
+</div>
+    </div>
+<script  type="text/javascript" language="javascript" src="JS/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var class_id;
+        var course_id;
+        var teacher_id;
+        var student_id;
+        var test_id;
+        var answer_id = window.location.href.split("?")[1];
+        $.ajax({
+            datatype:"json",
+            type:"POST",
+            url:"doTeacherAction.php",
+            data:"act="+"get_answer"+"&answer_id="+answer_id,
+            success: function (data) {
+                var arr = JSON.parse(data);
+               //判断选择题
+                var choice=arr[0][0].split(",");
+                var choice_num=choice.length;
+                $(".num").text("1-"+choice_num);
+
+                $('.right1').children().text(arr[3]);
+                $(".left1").html("");
+                for(var i=0;i<choice_num;i++){
+
+                    if(choice[i]==arr[3][i]) {
+                        $(".left1").append("<span class='answer-correct'>" + choice[i] +  "</span>");
+                    }else{
+                        $(".left1").append("<span class='answer-wrong'>" + choice[i] +  "</span>");
+                    }
+                }
+                $(".left1 span:not(:last)").each(function(){
+                    $(this).append(",");
+                });
+//填空题判断
+                var gap_num=arr[6].length;
+                var gap=arr[1][0].split(".");
+                $("#Sum").html("");
+                $("#Sum_answer").html("");
+              for(var i=0;i<gap_num;i++){
+                  if(arr[11][i]!='') {
+                      var html = "<li class='filling_list'><div>" + arr[6][i] + "</div><ol class='filling_blank'> <li>" +  gap[i + 1] + "</li> </ol> <ol class='filling_picture'> <li><img src='upload/"+arr[11][i]+"' alt='题目图'><span>题目图</span></li> </ol><div class='score_fill'><span>1分：<input type='checkbox'  value=1 class='check_box'></span><span>2分：<input type='checkbox' value=2 class='check_box'></span><span>3分：<input type='checkbox'  value=3 class='check_box'></span><span>4分：<input type='checkbox' value=4 class='check_box'></span></div></li>";
+                  }else{
+                      var html = "<li class='filling_list'><div>" + arr[6][i] + "</div><ol class='filling_blank'> <li>" +  gap[i + 1] + "</li> </ol> <ol class='filling_picture'>  </ol><div class='score_fill'><span>1分：<input type='checkbox' name='check1[]' value=1 class='check_box'></span><span>2分：<input type='checkbox' value=2 class='check_box'></span><span>3分：<input type='checkbox'  value=3 class='check_box'></span><span>4分：<input type='checkbox' value=4 class='check_box'></span></div></li>";
+                  }
+                  $("#Sum").append(html);
+             var html_answer=" <li class='filling_list'><div class='fill_answer'>"+arr[5][i]+"</div> </li>";
+                  $("#Sum_answer").append(html_answer);
+              }
+
+//简答题判断
+                var short_num=arr[7].length;
+                $("#short_student").html("");
+                $("#short_answer").html("");
+                for(var i=0;i<short_num;i++){
+                    if(arr[12][i]!='') {
+                        if(arr[13][i]!='') {
+                            var html_student = " <li class='subjective_list'><div>" + arr[8][i] + "</div><br> <div class='subjective_answer'>" + arr[2][i] + "</div> <ol class='subjective_picture'><li><img src='upload/" + arr[12][i] + "' alt=''><span>题目图</span></li> <li><img src='../students/upload/"+arr[13][i]+"' alt=''><span>学生作答图</span></li> </ol> </li>";
+
+                        }else{
+                            var html_student = " <li class='subjective_list'><div>" + arr[8][i] + "</div><br> <div class='subjective_answer'>" + arr[2][i] + "</div> <ol class='subjective_picture'><li><img src='upload/" + arr[12][i] + "' alt=''><span>题目图</span></li>  </ol> </li>";
+                        }}else{
+                        if(arr[13][i]!=''){
+                        var html_student = " <li class='subjective_list'><div>" + arr[8][i] + "</div><br> <div class='subjective_answer'>" + arr[2][i] + "</div> <ol class='subjective_picture'> <li><img src='../students/upload/"+arr[13][i]+"' alt=''><span>学生作答图</span></li> </ol> </li>";
+                    }else{
+                            var html_student = " <li class='subjective_list'><div>" + arr[8][i] + "</div><br> <div class='subjective_answer'>" + arr[2][i] + "</div> <ol class='subjective_picture'> </ol> </li>";
+                        }}
+                    $("#short_student").append(html_student);
+                    if(arr[14][i]!='') {
+                        var html_answer = " <li class='subjective_list'><div></div><br> <div class='subjective_answer'>" + arr[7][i] + "</div> <ol class='subjective_picture'><li><img src='upload/" + arr[12][i] + "' alt=''></li> </ol> </li>";
+                    }else{
+                        var html_answer = " <li class='subjective_list'><div></div><br> <div class='subjective_answer'>" + arr[7][i] + "</div> <ol class='subjective_picture'> </li> </ol> </li>";
+                    }
+                    $("#short_answer").append(html_answer);
+                    $("#short_student").append("得分：<input type='text' class='short_Score'>");
+                }
+                $("span:first").text(arr[0][1]);
+                $("#username").text(arr[9][0]);
+                $("#classname").text(arr[10][0]);
+              answer_id=arr[15][0];
+               class_id=arr[15][1];
+                course_id=arr[15][2];
+               teacher_id=arr[15][3];
+                student_id=arr[15][4];
+                 test_id=arr[15][5];
+            }
+
+        });
+            $("#s").on("click",function(){
+                var score=0;
+                var chocie_Score=$(".answer-correct").length;
+                $("input[type='checkbox']:checked").each(function(){
+                    score=score+parseInt($(this).val());
+                });
+                score=score+chocie_Score;
+                $(".short_Score").each(function(){
+                    score=score+parseInt($(this).val());
+                });
+                $.ajax({
+                            datatype:"html",
+                            type: "POST",
+                            url: "doteacherAction.php",
+                            data: "act="+"addScore"+"&score="+score+"&test_id="+test_id+"&class_id="+class_id+"&teacher_id="+teacher_id+"&student_id="+student_id+"&course_id="+course_id+"&answer_id="+answer_id,
+                            success:function(data){
+                                window.location.href="doHomework.php";
+                            }
+                        }
+                )
+            });
+	});
+</script>
+</body>
+</html>
